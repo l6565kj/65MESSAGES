@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery特效发布消息</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<link href="css/msgstyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="aui-body-box">
+	<div id="messageContent"></div>
+	<div class="aui-user-img">
+		<img src="images/mz.png" id="avtar" alt="">
+		<span id="nickname">萌主</span>
+	</div>
+	<input type="text" id="text" value="" placeholder="">
+	<input type="button" id="btn1" value="发送" placeholder="">
+</div>
+
+<script type="text/javascript">
+
+	var btn1 = document.getElementById('btn1');
+	var messageContent = document.getElementById('messageContent');
+	var text = document.getElementById('text');
+	var avtar = document.getElementById('avtar');
+	var nickname = document.getElementById('nickname');
+
+	btn1.onclick = function() {
+
+		var mes = text.value;
+		var imgSrc = avtar.src;
+		var nick = nickname.innerHTML;
+
+		if (f == 1) {
+			messageContent.innerHTML = messageContent.innerHTML + '<p> <img src = " ' + imgSrc + ' " alt = "" ><span> ' + nick + ' </span> <span>:' + mes + '</span> </p> ';
+		} else {
+			messageContent.innerHTML = messageContent.innerHTML + '<p class="aui-right"><img src = " ' + imgSrc + ' " alt = "" > <span>: ' + nick + '</span><span>' + mes + '</span>  </p> ';
+		}
+		text.value = '';
+	}
+
+	var f = 1;
+
+	nickname.onclick = avtar.onclick = function() {
+
+		if (f == 1) {
+			nickname.innerHTML = '阿呆';
+			avtar.src = 'images/ad.png';
+			f = 0;
+		} else {
+			nickname.innerHTML = '萌主';
+			avtar.src = 'images/mz.png';
+			f = 1;
+		}
+
+	}
+</script>
+
+</body>
+</html>

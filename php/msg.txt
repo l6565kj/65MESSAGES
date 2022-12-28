@@ -1,0 +1,6 @@
+ALLEN: 333
+Kim: test
+ALLEN: 可以的
+ALLEN: low吧
+ALLEN: 这个消息列表不好用 我刚搞定。。。
+ALLEN: 手动刷新页面获取消息 哈哈哈哈
